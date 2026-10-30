@@ -1,0 +1,13 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Dependencies (for future npm use)
+node_modules/
+
+# Environment files
+.env
