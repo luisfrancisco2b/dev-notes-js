@@ -49,3 +49,23 @@ header {
 #search-container input::placeholder {
   color: #fff;
 }
+
+/* export-notes */
+#export-notes {
+  color: #fff;
+  background-color: #333;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 5px 15px;
+  transition: 0.4s ease;
+}
+
+#export-notes:hover {
+  color: #333;
+  background-color: #fff;
+  transform: translateY(-5px);
+}
+
+#export-notes:active {
+  transform: scale(0.91);
+}
