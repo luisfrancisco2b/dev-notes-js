@@ -78,3 +78,23 @@ header {
   width: 400px;
   gap: 1rem;
 }
+
+#add-note-container input,
+#add-note-container button {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#add-note-container input {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid #525356;
+  outline: none;
+  color: #fff;
+}
+
+#add-note-container button {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
