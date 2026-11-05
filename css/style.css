@@ -96,5 +96,29 @@ header {
 #add-note-container button {
   background-color: #333;
   color: #fff;
+  border: 1px solid #525356;
   cursor: pointer;
+}
+
+/* notes-conatiner */
+#notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.note {
+  min-height: 200px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #202124;
+  color: #fff;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.note:hover {
+  transform: translateY(-10px);
 }
