@@ -20,8 +20,15 @@ function GenerateId() {
 }
 
 function createNote(id, content, fixed) {
+
+    // Div
     const element = document.createElement("div")
     element.classList.add("note")
+
+
+    // Textarea
+    const textarea = document.createElement("textarea")
+    textarea.value = content
 
 
 }
