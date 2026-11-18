@@ -20,6 +20,9 @@ function GenerateId() {
 }
 
 function createNote(id, content, fixed) {
+    const element = document.createElement("div")
+    element.classList.add("note")
+
 
 }
 
