@@ -4,8 +4,11 @@ const noteInput = document.querySelector("#note-content")
 const addNoteBtn = document.querySelector(".add-note")
 
 // Functions
+
+// Get note function
 function getNote() {
 
+    // Note object
     const noteObject = {
         id: GenerateId(),
         content: noteInput.value,
@@ -17,10 +20,12 @@ function getNote() {
     notesContainer.appendChild(noteElement)
 }
 
+// Generate Id function
 function GenerateId() {
     return Math.floor(Math.random() * 5000)
 }
 
+// Create Note function
 function createNote(id, content, fixed) {
 
     // Div
@@ -34,7 +39,6 @@ function createNote(id, content, fixed) {
     textarea.placeholder = "O que deseja anotar?"
 
     element.appendChild(textarea)
-
     return element
 }
 
