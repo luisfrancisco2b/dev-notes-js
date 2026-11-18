@@ -30,7 +30,9 @@ function createNote(id, content, fixed) {
     const textarea = document.createElement("textarea")
     textarea.value = content
 
+    element.appendChild(textarea)
 
+    return element
 }
 
 // Events
