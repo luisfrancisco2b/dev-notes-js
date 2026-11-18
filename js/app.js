@@ -7,16 +7,20 @@ const addNoteBtn = document.querySelector(".add-note")
 function getNote() {
 
     const noteObject = {
-        id: 1,
-        content: "",
+        id: GenerateId(),
+        content: noteInput.value,
         fixed: false,
     }
 
-
+    const noteElement = createNote(noteObject.id, noteObject.content)
 }
 
 function GenerateId() {
     return Math.floor(Math.random() * 5000)
+}
+
+function createNote(id, content, fixed) {
+
 }
 
 // Events
