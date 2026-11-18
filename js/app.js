@@ -13,6 +13,8 @@ function getNote() {
     }
 
     const noteElement = createNote(noteObject.id, noteObject.content)
+
+    notesContainer.appendChild(noteElement)
 }
 
 function GenerateId() {
@@ -29,6 +31,7 @@ function createNote(id, content, fixed) {
     // Textarea
     const textarea = document.createElement("textarea")
     textarea.value = content
+    textarea.placeholder = "O que deseja anotar?"
 
     element.appendChild(textarea)
 
