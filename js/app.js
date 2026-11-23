@@ -50,6 +50,15 @@ function createNote(id, content, fixed) {
     return element
 }
 
+// Local Storage
+
+function getNotes() {
+
+    const notes = JSON.parse(localStorage.getItem("notes") || "[]")
+
+    return notes
+}
+
 // Save notes function (local storage)
 function saveNotes(notes) {
 
