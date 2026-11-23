@@ -5,8 +5,19 @@ const addNoteBtn = document.querySelector(".add-note")
 
 // Functions
 
-// Get note function
-function getNote() {
+// Show notes function
+function showNotes() {
+
+    getNotes().forEach((note) => {
+        const noteElement = createNote(note.id, note.content, note.fixed)
+
+        notesContainer.appendChild(noteElement)
+    })
+
+}
+
+// Add notes function
+function addNote() {
 
     const notes = []
 
@@ -33,7 +44,7 @@ function GenerateId() {
     return Math.floor(Math.random() * 5000)
 }
 
-// Create Note function
+// Create notes function
 function createNote(id, content, fixed) {
 
     // Div
@@ -67,4 +78,7 @@ function saveNotes(notes) {
 }
 
 // Events
-addNoteBtn.addEventListener("click", () => getNote())
+addNoteBtn.addEventListener("click", () => addNote())
+
+// Initialization
+showNotes()
