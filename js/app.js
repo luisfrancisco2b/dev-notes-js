@@ -19,7 +19,7 @@ function showNotes() {
 // Add notes function
 function addNote() {
 
-    const notes = []
+    const notes = getNotes()
 
     // Note object
     const noteObject = {
