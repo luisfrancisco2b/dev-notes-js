@@ -8,6 +8,8 @@ const addNoteBtn = document.querySelector(".add-note")
 // Get note function
 function getNote() {
 
+    const notes = []
+
     // Note object
     const noteObject = {
         id: GenerateId(),
@@ -18,6 +20,12 @@ function getNote() {
     const noteElement = createNote(noteObject.id, noteObject.content)
 
     notesContainer.appendChild(noteElement)
+
+    notes.push(noteObject)
+
+    saveNotes(notes)
+
+    noteInput.value = ""
 }
 
 // Generate Id function
@@ -40,6 +48,13 @@ function createNote(id, content, fixed) {
 
     element.appendChild(textarea)
     return element
+}
+
+// Save notes function (local storage)
+function saveNotes(notes) {
+
+    localStorage.setItem("notes", JSON.stringify(notes))
+
 }
 
 // Events
