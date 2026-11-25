@@ -58,10 +58,16 @@ function createNote(id, content, fixed) {
     textarea.placeholder = "O que deseja anotar?"
 
     element.appendChild(textarea)
+
+    const pinIcon = document.createElement("i")
+    pinIcon.classList.add(...["bi", "bi-pin"])
+
+    element.appendChild(pinIcon)
+
     return element
 }
 
-// Local Storage
+// Local storage
 
 function getNotes() {
 
