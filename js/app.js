@@ -67,6 +67,10 @@ function createNote(id, content, fixed) {
     // Element events
     element.querySelector(".bi-pin").addEventListener("click", () => toggleFixNote(id))
 
+    if (fixed) {
+        element.classList.add("fixed")
+    }
+
     return element
 }
 
