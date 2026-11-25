@@ -74,12 +74,11 @@ function toggleFixNote(id) {
 
     const notes = getNotes()
 
-    const toggleNote = notes.filter((note) => note.id === id)[0]
+    const targetNote = notes.filter((note) => note.id === id)[0]
 
-    toggleNote.fixed = !toggleNote
+    targetNote.fixed = !targetNote
 
-    console.log(toggleNote)
-
+    saveNotes(targetNote)
 }
 
 // Local storage
