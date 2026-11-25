@@ -64,8 +64,12 @@ function createNote(id, content, fixed) {
 
     element.appendChild(pinIcon)
 
+    // Element events
+    element.querySelector(".bi-pin").addEventListener("click", () => toggleFixNote())
+
     return element
 }
+
 
 // Local storage
 
